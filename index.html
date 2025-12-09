@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trusted by Travelers Section</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #1f2933;
+      background: #ffffff;
+    }
+
+    .section-wrapper {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .trusted-section {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    /* LEFT: IMAGE BLOCK */
+    .trusted-media {
+      flex: 1 1 55%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .trusted-media img {
+      width: 100%;
+      display: block;
+    }
+
+    .play-btn {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: rgba(255, 130, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+
+    .play-btn::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 18px solid #ffffff;
+      border-top: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+      margin-left: 4px;
+    }
+
+    /* RIGHT: TEXT BLOCK */
+    .trusted-text {
+      flex: 1 1 45%;
+    }
+
+    .trusted-text h2 {
+      font-size: 36px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .trusted-text h2 span {
+      display: block;
+    }
+
+    .trusted-text p {
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .trusted-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-outline {
+      padding: 12px 28px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 4px;
+      border: 2px solid #f28a1a;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: #f28a1a;
+      color: #ffffff;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #f28a1a;
+    }
+
+    .btn-primary:hover {
+      background: #d67408;
+      border-color: #d67408;
+    }
+
+    .btn-outline:hover {
+      background: #fff4e5;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .trusted-section {
+        flex-direction: column;
+      }
+
+      .trusted-text h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="section-wrapper">
+    <div class="trusted-section">
+      <!-- LEFT: IMAGE + PLAY BUTTON -->
+      <div class="trusted-media">
+        <!-- Apni image ka path yahan lagao -->
+        <img src="your-image.jpg" alt="Self drive trip cars on a salt desert" />
+        <button class="play-btn" aria-label="Play video"></button>
+      </div>
+
+      <!-- RIGHT: HEADING + TEXT + BUTTONS -->
+      <div class="trusted-text">
+        <h2>
+          <span>Trusted by 1000+</span>
+          <span>Travelers Worldwide</span>
+        </h2>
+
+        <p>
+          Thousands of travelers trust our company for their dream road trips –
+          from long-distance expeditions to premium self-drive holidays. We
+          focus on comfort, expertise and unforgettable memories with
+          carefully-designed    test routes, great stays and personalized service.
+        </p>
+
+        <div class="trusted-actions">
+          <a href="#" class="btn-primary">Explore More</a>
+          <a href="#" class="btn-outline">Know More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
