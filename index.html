@@ -2,174 +2,349 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Trusted by Travelers Section</title>
+  <title>Overland Adventures | Guided Road Trips</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #1f2933;
-      background: #ffffff;
-    }
-
-    .section-wrapper {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .trusted-section {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-    }
-
-    /* LEFT: IMAGE BLOCK */
-    .trusted-media {
-      flex: 1 1 55%;
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    .trusted-media img {
-      width: 100%;
-      display: block;
-    }
-
-    .play-btn {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      background: rgba(255, 130, 0, 0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border: none;
-      outline: none;
-    }
-
-    .play-btn::before {
-      content: "";
-      display: block;
-      width: 0;
-      height: 0;
-      border-left: 18px solid #ffffff;
-      border-top: 11px solid transparent;
-      border-bottom: 11px solid transparent;
-      margin-left: 4px;
-    }
-
-    /* RIGHT: TEXT BLOCK */
-    .trusted-text {
-      flex: 1 1 45%;
-    }
-
-    .trusted-text h2 {
-      font-size: 36px;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .trusted-text h2 span {
-      display: block;
-    }
-
-    .trusted-text p {
-      font-size: 15px;
-      margin-bottom: 24px;
-    }
-
-    .trusted-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary,
-    .btn-outline {
-      padding: 12px 28px;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      border-radius: 4px;
-      border: 2px solid #f28a1a;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background: #f28a1a;
-      color: #ffffff;
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: #f28a1a;
-    }
-
-    .btn-primary:hover {
-      background: #d67408;
-      border-color: #d67408;
-    }
-
-    .btn-outline:hover {
-      background: #fff4e5;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .trusted-section {
-        flex-direction: column;
-      }
-
-      .trusted-text h2 {
-        font-size: 28px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <section class="section-wrapper">
-    <div class="trusted-section">
-      <!-- LEFT: IMAGE + PLAY BUTTON -->
-      <div class="trusted-media">
-        <!-- Apni image ka path yahan lagao -->
-        <img src="your-image.jpg" alt="Self drive trip cars on a salt desert" />
-        <button class="play-btn" aria-label="Play video"></button>
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <!-- yahan tum apna logo image bhi laga sakte ho -->
+        <span class="logo-mark">AO</span>
+        <span class="logo-text">Overland Adventures</span>
       </div>
 
-      <!-- RIGHT: HEADING + TEXT + BUTTONS -->
-      <div class="trusted-text">
-        <h2>
-          <span>Trusted by 1000+</span>
-          <span>Travelers Worldwide</span>
-        </h2>
+      <nav class="main-nav">
+        <a href="#trips">Fixed Departures</a>
+        <a href="#road-to-london">Road To London</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Guided Self-Drive Road Trips Across the World</h1>
         <p>
-          Thousands of travelers trust our company for their dream road trips –
-          from long-distance expeditions to premium self-drive holidays. We
-          focus on comfort, expertise and unforgettable memories with
-          carefully-designed    test routes, great stays and personalized service.
+          Join curated expeditions across continents. Premium stays, expert
+          support and unforgettable stories on every mile.
         </p>
-
-        <div class="trusted-actions">
-          <a href="#" class="btn-primary">Explore More</a>
-          <a href="#" class="btn-outline">Know More</a>
+        <div class="hero-actions">
+          <a href="#trips" class="btn btn-primary">Explore Departures</a>
+          <a href="#contact" class="btn btn-outline">Plan Your Trip</a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- TRUSTED BY SECTION (jaisa tumne pehle screenshot bheja tha) -->
+  <section class="trusted" id="trusted">
+    <div class="container trusted-grid">
+      <div class="trusted-media">
+        <!-- apni image dalna: images/trust.jpg -->
+        <div class="img-placeholder">Hero Drive Image</div>
+        <button class="play-btn" aria-label="Play video"></button>
+      </div>
+
+      <div class="trusted-text">
+        <h2>
+          <span>Trusted by 1000+ Travelers</span>
+          <span>Across the Globe</span>
+        </h2>
+        <p>
+          Travelers from different countries have joined our convoys on
+          legendary routes – from high mountain passes to coastal highways.
+          Every expedition blends comfort, safety, and a spirit of exploration.
+        </p>
+        <p>
+          With dedicated crew, carefully planned routes and premium
+          accommodations, we handle the details so you can focus on the journey
+          ahead.
+        </p>
+        <div class="trusted-actions">
+          <a href="#experiences" class="btn btn-primary">Explore More</a>
+          <a href="#stories" class="btn btn-outline">Guest Stories</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIXED DEPARTURES / TRIPS -->
+  <section class="section" id="trips">
+    <div class="container">
+      <header class="section-header">
+        <h2>Featured Fixed Departures</h2>
+        <p>Road-tested itineraries in handpicked destinations.</p>
+      </header>
+
+      <div class="card-grid">
+        <article class="trip-card">
+          <div class="card-image-placeholder">Iceland Drive</div>
+          <div class="card-body">
+            <h3>Iceland Overland</h3>
+            <p>
+              Loop around waterfalls, glaciers and black sand beaches on a
+              guided self-drive expedition.
+            </p>
+            <ul class="meta">
+              <li>10 Days</li>
+              <li>Small Convoy</li>
+              <li>4×4 SUVs</li>
+            </ul>
+            <a href="#" class="link">View Itinerary →</a>
+          </div>
+        </article>
+
+        <article class="trip-card">
+          <div class="card-image-placeholder">Himalayas Drive</div>
+          <div class="card-body">
+            <h3>Indian Himalayas Expedition</h3>
+            <p>
+              Conquer iconic passes, remote valleys and starry nights in the
+              high Himalayas.
+            </p>
+            <ul class="meta">
+              <li>12 Days</li>
+              <li>Guided Convoy</li>
+              <li>Premium Stays</li>
+            </ul>
+            <a href="#" class="link">View Itinerary →</a>
+          </div>
+        </article>
+
+        <article class="trip-card">
+          <div class="card-image-placeholder">Morocco Drive</div>
+          <div class="card-body">
+            <h3>Morocco Desert Drive</h3>
+            <p>
+              Traverse ancient medinas, Atlas Mountains and golden dunes in a
+              self-drive convoy.
+            </p>
+            <ul class="meta">
+              <li>9 Days</li>
+              <li>Convoy Support</li>
+              <li>Handpicked Hotels</li>
+            </ul>
+            <a href="#" class="link">View Itinerary →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROAD TO LONDON STYLE SECTION -->
+  <section class="section section-alt" id="road-to-london">
+    <div class="container split">
+      <div class="split-text">
+        <h2>Road To London Style Expeditions</h2>
+        <p>
+          Dream of crossing continents overland? Our trans-continental convoys
+          string together cities, cultures and landscapes on once-in-a-lifetime
+          journeys.
+        </p>
+        <p>
+          From documentation support to vehicle logistics and border crossings,
+          our team handles complex details so your focus stays on the road.
+        </p>
+        <ul class="bullet-list">
+          <li>Multi-country overland routes</li>
+          <li>Support crew & backup vehicle</li>
+          <li>Visa & logistics assistance</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <div class="img-placeholder tall">Convoy Map / Image</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES / ICON GRID -->
+  <section class="section" id="experiences">
+    <div class="container">
+      <header class="section-header">
+        <h2>Why Travel With Us</h2>
+        <p>Thoughtfully crafted experiences on every departure.</p>
+      </header>
+
+      <div class="icon-grid">
+        <div class="icon-card">
+          <div class="icon-circle">✓</div>
+          <h3>Curated Routes</h3>
+          <p>
+            Every itinerary is road-tested with scenic drives, interesting
+            stopovers and authentic experiences.
+          </p>
+        </div>
+
+        <div class="icon-card">
+          <div class="icon-circle">★</div>
+          <h3>Premium Comfort</h3>
+          <p>
+            Handpicked stays, quality vehicles and small convoys for a relaxed
+            driving holiday.
+          </p>
+        </div>
+
+        <div class="icon-card">
+          <div class="icon-circle">👥</div>
+          <h3>Expert Support</h3>
+          <p>
+            Expedition leaders, local fixers and support crew travelling along
+            with the convoy.
+          </p>
+        </div>
+
+        <div class="icon-card">
+          <div class="icon-circle">🌍</div>
+          <h3>Global Destinations</h3>
+          <p>
+            From deserts and mountains to coastlines and forests across
+            multiple continents.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORIES / TESTIMONIALS -->
+  <section class="section section-alt" id="stories">
+    <div class="container">
+      <header class="section-header">
+        <h2>Guest Stories</h2>
+        <p>Hear from travelers who have driven with us.</p>
+      </header>
+
+      <div class="testimonial-grid">
+        <article class="testimonial">
+          <p>
+            “Flawless planning and stunning routes. We just had to show up,
+            drive and enjoy the views.”
+          </p>
+          <span class="author">— Rohan & Nidhi, Iceland Expedition</span>
+        </article>
+
+        <article class="testimonial">
+          <p>
+            “Driving across high passes in a convoy with full support was a
+            once-in-a-lifetime experience.”
+          </p>
+          <span class="author">— Sarah, Himalayas Convoy</span>
+        </article>
+
+        <article class="testimonial">
+          <p>
+            “Great team, great cars and unforgettable stories from every
+            evening around the bonfire.”
+          </p>
+          <span class="author">— Mark & Lisa, Desert Drive</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section class="section contact-section" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <h2>Plan Your Next Road Trip</h2>
+        <p>
+          Share your preferred destination and travel month. Our team will help
+          you pick the right departure or craft a private journey.
+        </p>
+        <ul class="bullet-list">
+          <li>Small group fixed departures</li>
+          <li>Custom private convoys</li>
+          <li>Corporate & incentive trips</li>
+        </ul>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-row">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" placeholder="Your name" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" />
+        </div>
+
+        <div class="form-row two-col">
+          <div>
+            <label for="destination">Preferred Region</label>
+            <select id="destination">
+              <option>Choose a region</option>
+              <option>Indian Himalayas</option>
+              <option>Iceland</option>
+              <option>Morocco</option>
+              <option>Europe</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="month">Travel Month</label>
+            <input id="month" type="month" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Tell us about your trip</label>
+          <textarea id="message" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary full-width">
+          Submit Enquiry
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">
+          <span class="logo-mark">AO</span>
+          <span class="logo-text">Overland Adventures</span>
+        </div>
+        <p class="footer-text">
+          Curated self-drive road trips and guided convoys across iconic routes
+          worldwide.
+        </p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#trips">Fixed Departures</a></li>
+          <li><a href="#experiences">Why Us</a></li>
+          <li><a href="#stories">Guest Stories</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Stay Connected</h4>
+        <p class="footer-text">
+          Email: hello@example.com<br />
+          Phone: +91-98765-43210
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Overland Adventures. Practice layout for learning only.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
